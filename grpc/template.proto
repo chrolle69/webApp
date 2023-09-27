@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/chrolle69/webApp.git/proto";
+
+
+service Template{
+   rpc student (stream Greeting) returns (stream Farewell);
+   
+}
+
+message Greeting {
+   string studentName = 1;
+   string message = 2;
+}
+message Farewell {
+   string message = 1;
+}
